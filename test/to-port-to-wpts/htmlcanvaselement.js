@@ -78,7 +78,7 @@ describe("htmlcanvaselement", () => {
     }
   );
 
-  specify(
+  specify.skip(
     "canvas must resize correctly when given a non-default width/height (GH-1025)",
     t => {
       if (!isCanvasInstalled(assert, t.done)) {
@@ -128,7 +128,7 @@ describe("htmlcanvaselement", () => {
     }
   );
 
-  specify(
+  specify.skip(
     "toDataURL should work (when the canvas npm package is provided) (GH-1025)",
     t => {
       if (!isCanvasInstalled(assert, t.done)) {
@@ -144,7 +144,7 @@ describe("htmlcanvaselement", () => {
     { async: true }
   );
 
-  specify(
+  specify.skip(
     "loading an image and drawing it into the canvas should produce the expected result",
     t => {
       if (!isCanvasInstalled(assert, t.done)) {

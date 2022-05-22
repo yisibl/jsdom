@@ -11,7 +11,7 @@ const { isCanvasInstalled } = require("../util.js");
 const toFileUrl = require("../util").toFileUrl(__dirname);
 
 describe("htmlimageelement", { skipIfBrowser: true }, () => {
-  specify(
+  specify.only(
     "Image constructor should create a HTMLImageElement with specified width and height",
     () => {
       const { window } = new JSDOM();
