@@ -52,10 +52,14 @@
     "parse5": "Pinned to exact version number because we monkeypatch its internals (see htmltodom.js)"
   },
   "peerDependencies": {
-    "canvas": "^2.5.0"
+    "canvas": "^2.5.0",
+    "@napi-rs/canvas": "^0.1.21"
   },
   "peerDependenciesMeta": {
     "canvas": {
+      "optional": true
+    },
+    "@napi-rs/canvas": {
       "optional": true
     }
   },
@@ -93,9 +97,9 @@
     "pretest": "yarn prepare && yarn init-wpt",
     "test-wpt": "mocha test/web-platform-tests/run-wpts.js",
     "test-tuwpt": "mocha test/web-platform-tests/run-tuwpts.js",
-    "test-mocha": "mocha",
+    "test-mocha": "mocha --jobs 0",
     "test-api": "mocha test/api",
-    "test": "mocha test/index.js",
+    "test": "mocha test/index.js --jobs 0",
     "test-browser-iframe": "karma start test/karma.conf.js",
     "test-browser-worker": "karma start test/karma-webworker.conf.js",
     "test-browser": "yarn test-browser-iframe && yarn test-browser-worker",
