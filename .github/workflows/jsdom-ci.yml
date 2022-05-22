@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Run tests
-        run: yarn add canvas && yarn test --retries 1
+        run: yarn add canvas && yarn add @napi-rs/canvas && yarn test --retries 1
   build-with-browser:
     env:
       TEST_SUITE: 'browser'
